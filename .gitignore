@@ -1,4 +1,6 @@
 __pycache__/
 config.py 
 venv/
+.env
+data/Cryptodata.db
 
