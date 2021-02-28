@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crypto Currency</title>
+    <link rel="stylesheet" href="/static/picni.css">
+    
+
+</head>
+<body style="background-color:rgba(197, 197, 200, 0.835);">
+    <header>
+        <p>Crypto Converter</p>
+        <hr width="100%" size="10" style="color: hsl(0, 0%, 0%);"/>
+    </header>
+    {% if menu == 'index' %}
+    <u class="button">Inicio</u> | <a href="/purchase" class="pseudo button">Compra</a> | <a href="/status" class="pseudo button">Status / Saldo</a>
+    {% elif menu == 'purchase' %}
+    <a href="/" class="pseudo button">Inicio</a> | <u class="pseudo button">Compra</u> | <a href="/status" class="pseudo button">Status / Saldo</a>
+    {% elif menu == 'status'%}
+    <a href="/" class="pseudo button">Inicio</a> | <a href="/purchase" class="pseudo button">Compra</a> | <u class="pseudo button">Status / Saldo</u>
+    {% endif %}
+
+    <section class="container">
+        {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <hr width="560%" size="10" style="color: hsl(0, 0%, 0%);"/>
+        &copy 2020 - Todos los derechos reservados
+    </footer>
+</body>
+</html>

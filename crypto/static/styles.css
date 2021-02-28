@@ -1,0 +1,539 @@
+html,body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color:rgb(0, 0, 0);
+    font-family:'Opens Sans',helvetica;
+    height:100%;
+    width:101%;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: #981ce0 2px solid;
+    border-top: #981ce0 2px solid;
+  }
+
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#981ce0);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    background-color: rgb(#fdfdfd);
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px;
+
+}
+
+.myCoolButton1 {
+    
+    background-color: #524e4ef3;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 260px;
+    bottom:-50px
+
+}
+
+.myCoolButton2 {
+    background-color: #524e4ef3;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 950px;
+    bottom:-50px
+
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.8em; color: rgb(0, 0, 0);
+    padding: 10px;
+
+}
+
+.title_sin {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.3em; color: rgb(0, 0, 0);
+    padding: 10px;
+    width: 10%;
+
+
+}
+.movements {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.0em; color: rgb(0, 0, 0);
+    padding: 10px;
+
+}
+.selector1 {
+
+    background-color: rgb(174, 170, 238) ;
+    width: 3cm;
+    position: relative;
+    left: 480px;
+    bottom:80px;
+}
+
+.selector2 {
+
+    background-color: rgb(174, 170, 238) ;
+    width: 3cm;
+    position: relative;
+    left: 800px;
+    bottom:215px;
+}
+
+.to_purchase {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 740px;
+    bottom:145px;
+
+}
+
+.from_purchase {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 390px;
+    bottom:15px;
+
+}
+
+.q_input {
+
+    background-color: rgb(174, 170, 238) ;
+    position: relative;
+    left: 595px;
+    bottom:110px;
+
+}
+.calc_q {
+
+    background: #524e4ef3;
+    position: relative;
+    left: 610px;
+    bottom:110px;
+}
+
+
+.q {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 480px;
+    bottom:218px;
+}
+
+.quant {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: normal;
+    font-size: 1.1em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 520px;
+    bottom:330px;
+
+
+}
+.q_result {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 440px;
+    bottom:195px;
+
+
+}
+
+.p_u {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 450px;
+    bottom:330px;
+}
+
+.p_u_cant {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: normal;
+    font-size: 1.1em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 520px;
+    bottom:400px;
+
+
+}
+
+.valid_error {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 230px;
+    bottom:380px;
+}
+.crypto_error {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 300px;
+    bottom:380px;
+}
+
+.crypto_incompatible {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 300px;
+    bottom:380px;
+}
+
+.alerta_saldo {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 370px;
+    bottom:380px;
+}
+
+
+.error_db {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 370px;
+    bottom:380px;
+}
+
+.error_db_index {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 0px;
+    position: relative;
+    left: 360px;
+    bottom:-180px;
+}
+
+.error_db_status, .error_api_status {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 0px;
+    position: relative;
+    left: 450px;
+    bottom:0px;
+}
+
+.error_api {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 490px;
+    bottom:420px;
+}
+
+.sin_saldo {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 300px;
+    bottom:380px;
+}
+
+
+.btn_purchase {
+
+    background: #981ce0;
+    width: 100px;
+    position: relative;
+    left: 960px;
+    bottom:400px;
+}
+
+.btn_clear_purchase {
+
+    background-color: #524e4ef3;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 700px;
+    bottom:400px;
+}
+
+.inicio_purchase {
+
+    background-color: #524e4ef3;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 370px;
+    bottom: 400px
+
+}
+
+.total_invertido {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 450px;
+    bottom:-30px;
+
+}
+
+.total_invertido_display {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 550px;
+    bottom:-30px;
+
+}
+
+.inversion {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    text-decoration: underline #981ce0;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 600px;
+    bottom: 22px;
+}
+
+.valor_actual {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 420px;
+    bottom:80px;
+}
+
+.valor_actual_display {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    text-decoration: underline #981ce0;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 600px;
+    bottom:130px;
+}
+
+.balance_total {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 800px;
+    bottom:220px;
+}
+
+.balance_total_beneficio {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    text-decoration: underline #981ce0;
+    font-size: 1.2em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: 930px;
+    bottom:270px;
+}
+
+.balance_total_perdida {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: underline rgb(231, 26, 26);
+    font-size: 1.2em; color: rgb(231, 26, 26);
+    padding: 10px;
+    position: relative;
+    left: 930px;
+    bottom:270px;
+}
+
+.cryptosaldo_sin {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.8em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: -5px;
+    bottom:110px;
+
+}
+
+.cryptohead_sin {
+
+    position: relative;
+    left: 0px;
+    bottom:100px;
+}
+
+.cryptosaldo {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(#000000);
+    font-weight: bold;
+    font-size: 1.8em; color: rgb(0, 0, 0);
+    padding: 10px;
+    position: relative;
+    left: -5px;
+    bottom:190px;
+
+}
+
+.cryptohead {
+
+    position: relative;
+    left: 0px;
+    bottom:170px;
+}
+
+td {
+    width: 650px;
+    height: 30px;
+    border: solid #000 1px ;
+}
+
+th {
+
+    width: 650px;
+    height: 30px;
+    text-align: center;
+
+
+}
+
+.btnVolver_sin {
+
+    background-color: #981ce0;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 650px;
+    bottom: 320px
+}
+
+.btnVolver {
+
+    background-color: #981ce0;
+    color: whitesmoke;
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    position: relative;
+    left: 650px;
+    bottom: 390px
+}
+
+
+thead {
+
+    display: block;
+
+
+}
+
+tbody {
+    display: block;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

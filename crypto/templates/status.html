@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %} Status - Crypto Converter {% endblock %}
+
+{% block content %}
+    <h1 align="center" class="title">ESTADO DE LA INVERSIÓN</h1>
+    <hr width="50%" size="20" style="color: hsl(0, 0%, 0%);"/>
+
+    {% if movOrNot == True %}
+        {% if errorDB %}
+            <h5 class="error_db_status">{{ errorDB }}</h5>
+        {% endif %}
+        <h2 class="total_invertido">Invertido:</h2>
+        <h2 class="inversion"> 0 €</h2>
+        <h2 class="total_invertido_display"></h2>
+        <br><br><br>
+        <h2 class="valor_actual">Valor actual:</h2>
+        <h2 class="valor_actual_display"> 0 €</h2>
+        <h1 align="center" class="cryptosaldo_sin">SALDO CRIPTOMONEDAS</h1>
+        <table WIDTH="80%" class="cryptohead_sin" align="center">
+            <thead>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;BTC</th>
+                    <th>&nbsp;&nbsp;ETH</th>
+                    <th>XRP</th>
+                    <th>LTC</th>
+                    <th>BCH</th>
+                    <th>BNB</th>
+                    <th>USDT</th>
+                    <th>EOS</th>
+                    <th>BSV</th>
+                    <th>XLM</th>
+                    <th>ADA</th>
+                    <th>TRX</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if not cryptoBalance %}
+                    <tr>
+                        <td class="title_sin"> SIN INVERSIÓN </td>
+                    </tr>
+                {% else %}
+                <tr class="movements">
+                    {% for coins in cryptoBalance %}
+                        <td>{{ coins }}</td>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+        <a href="/" class="btnVolver_sin">Inicio</a>
+    {% else %}
+        {% if errorAPI %}
+            <p class="error_api_status">{{ errorAPI }}</p>
+        {% endif %}
+        <h2 class="total_invertido">Invertido:</h2>
+        {% if totalInver >= 1 %}
+            <h2 class="inversion">{{ "{:,.2f}".format(totalInver) }} €</h2>
+        {% else %}
+            <h2 class="inversion">{{ "{:,.5f}".format(totalInver) }} €</h2>
+        {% endif %}
+        <h2 class="total_invertido_display"></h2>
+        <br><br>
+        <h2 class="valor_actual">Valor actual:</h2>
+        {% if valorAct >= 1 %}
+            <h2 class="valor_actual_display">{{ "{:,.2f}".format(valorAct) }} €</h2>
+        {% else %}
+            <h2 class="valor_actual_display">{{ "{:,.5f}".format(valorAct) }} €</h2>
+        {% endif %}
+        {% if dif > 0 %}
+            <h2 class="balance_total">Beneficio:</h2>
+            {% if dif >= 1 %}
+                <h2 class="balance_total_beneficio">{{ "{:,.2f}".format(dif) }} €</h2>
+            {% else %}
+                <h2 class="balance_total_beneficio">{{ "{:,.5f}".format(dif) }} €</h2>
+            {% endif %}
+        {% elif dif < 0 %}
+            <h2 class="balance_total">Pérdida:</h2>
+            {% if dif <= -1 %}
+                <h2 class="balance_total_perdida">{{ "{:,.2f}".format(dif) }} €</h2>
+            {% else %}
+                <h2 class="balance_total_perdida">{{ "{:,.5f}".format(dif) }} €</h2>
+            {% endif %}
+        {% else %}
+            <h2 class="balance_total">Sin pérdida ni beneficio</h2>
+        {% endif %}
+        <h1 align="center" class="cryptosaldo">SALDO CRIPTOMONEDAS</h1>
+        <table WIDTH="80%" class="cryptohead" align="center">
+            <thead>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;BTC</th>
+                    <th>&nbsp;ETH</th>
+                    <th>XRP</th>
+                    <th>LTC</th>
+                    <th>BCH</th>
+                    <th>BNB</th>
+                    <th>USDT</th>
+                    <th>EOS</th>
+                    <th>BSV</th>
+                    <th>XLM</th>
+                    <th>ADA</th>
+                    <th>TRX</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if not cryptoBalance %}
+                    <tr>
+                        <td class="title_sin"> SIN INVERSIÓN </td>
+                    </tr>
+                {% else %}
+                <tr class="movements">
+                    {% for coins in cryptoBalance %}
+                        <td>{{ "{:,.2f}".format(coins) }}</td>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+        <a href="/" class="btnVolver">Inicio</a>
+    {% endif %}
+    {% endblock %}

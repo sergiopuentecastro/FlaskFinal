@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Compras - Crypto Converter {% endblock %}
+
+
+{% block content %}
+    <h1 align="center" class="title">COMPRA DE CRIPTOS</h1>
+    <hr width="50%" size="20" style="color: hsl(0, 0%, 0%);"/>
+    <p class="from_purchase">From:</p>
+
+    <form action="/purchase" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.slct_from(class="selector1", style="width:200px") }}
+
+        <p class="to_purchase">To:</p>
+        {{ form.slct_to(class="selector2", style="width:200px") }}
+
+        {{ form.inputCantidad(class="q_input", style="width:150px", placeholder="Cantidad") }}
+ 
+        {{ form.submitCalcular(class="calc_q")}}
+
+        <p class="q">Q:</p> <p class="q_result">{{result}}</p>
+        {% if data[0] >= 1 %}
+            <p class="quant">{{ "{:,.2f}".format(data[0]) }} {{ data[2] }} </p>
+        {% else %}
+            <p class="quant">{{ "{:,.5f}".format(data[0]) }} {{ data[2] }} </p>
+        {% endif %}
+            <p class="p_u">P.U.:</p>
+        {% if data[1] >= 1 %}
+            <p class="p_u_cant">{{"{:,.2f}".format(data[1]) }} {{ data[2] }}</p>
+        {% else %}
+            <p class="p_u_cant">{{"{:,.5f}".format(data[1]) }} {{ data[2] }}</p>
+        {% endif %}
+        {% if validError %}
+            <p class="valid_error">{{ validError }}</p>
+        {% endif %}
+        {% if cryptoError %}
+            <p class="crypto_error">{{ cryptoError }}</p>
+        {% endif %}
+        {% if cryptoIncompatible %}
+            <p class="crypto_incompatible">{{ cryptoIncompatible }} <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ "/Use BTC para comprar Euros o resto de crytomonedas/" }}</p>
+        {% endif %}
+        {% if alert %}
+            <p class="alerta_saldo">{{ alert }}</p>
+        {% endif %}
+        {% if errorAPI %}
+            <p class="error_api">{{ errorAPI }}</p>
+        {% endif %}
+        {% if errorDB %}
+            <p class="error_db">{{ errorDB }}</p>
+        {% endif %}
+        {% if sinSaldo %}
+            <p class="sin_saldo">{{ sinSaldo }}</p>
+        {% endif %}
+
+        {{ form.submitCompra(class="btn_purchase")}}
+
+        <a href="/purchase " class="btn_clear_purchase">Borrar</a>
+        <a href="/" class="inicio_purchase">Inicio</a>
+    </form>
+{% endblock %}
